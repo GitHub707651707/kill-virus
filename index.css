@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+/* 场景背景图 */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+#bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-image: url('./src/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* ui层 */
+#ui {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ui-开始界面 */
+#ui-start {
+    width: 100%;
+    margin: 80px auto;
+    text-align: center;
+    display: block;
+}
+#ui-start img {
+    width: 300px;
+}
+#ui-start p {
+    color: white;
+    margin: 20px auto;
+}
+#ui-start button {
+    margin: 20px auto;
+    color: white;
+    font-size: 36px;
+    width: 300px;
+    height: 60px;
+    line-height: 50px;
+    border-radius: 10px;
+    background-color: #40c061;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #b6ff00, 0 0 7px #b6ff00, 0 0 10px #b6ff00, 0 0 15px #b6ff00;
+}
+/* ui-分数统计 */
+#ui-score {
+    border-bottom: solid 3px #40c061;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    padding: 5px;
+    overflow: hidden;
+}
+#ui-score img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+#ui-score span {
+    font-size: 30px;
+    color: white;
+    vertical-align: middle;
+    margin-left: 30px;
+}
+/* ui-结束 */
+#ui-end {
+    width: 100%;
+    margin: 200px auto;
+    text-align: center;
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+#ui-end h1 {
+    color: white;
+}
+#ui-end button {
+    margin: 20px auto;
+    color: white;
+    font-size: 36px;
+    width: 300px;
+    height: 60px;
+    line-height: 50px;
+    border-radius: 10px;
+    background-color: #40c061;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 4px #b6ff00, 0 0 7px #b6ff00, 0 0 10px #b6ff00, 0 0 15px #b6ff00;
+}
+/* 警告页面 */
+#ui-warn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right, rgba(255, 0, 0, .5) 0%, rgba(255, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 80%, rgba(255, 0, 0, .5) 100%) !important;
+    z-index: 10;
+    opacity: 0;
+}
+.warn-anim {
+    animation: color-fade 0.5s 3;
+}
+/* 警告动画 */
+@keyframes color-fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 游戏内容 */
+/* 开始界面滑动消失 */
+.slide-up {
+    transform: translateY(-600px);
+    transition: transform 0.5s ease-in-out;
+}
+.slide-down {
+    transform: translateY(600px);
+    transition: transform 0.5s ease-in-out;
+}
+/* 病毒样式  */
+.virus {
+    width: 80px;
+    height: 80px;
+    background-image: url('./src/virus.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+}
+/* 病毒消失动画 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+}
+/* 字母样式 */
+.letter {
+    background-image: radial-gradient(rgba(255,150,150,0),rgba(255,0,0,1));
+    box-shadow: 0 0 15px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    border-radius: 60px;
+    font-size: 28px;
+    font-weight: 800;
+}
